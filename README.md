@@ -9,7 +9,6 @@ Some prequisites are required to get this project running smoothly. I 100% recom
 - By default you will be missing `/config/database.yml`. You'll need to add this file yourself and setup your PostgreSQL database to connect to the Rails app. This is the default `database.yml` that was generated for the project as a guideline.
 
 ```yml
-
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -29,6 +28,8 @@ test:
 ```
 ## Running the project
 TBA
+
+Once you get the app running, connect to the web container (rails-app) and run `rake db:create`.
 
 
 Things you may want to cover:
