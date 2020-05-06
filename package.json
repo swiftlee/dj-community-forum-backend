@@ -1,16 +1,18 @@
 {
   "name": "dj_community_forum_backend",
   "private": true,
+  "scripts": {
+    "docker-build": "docker build -t rails-toolbox -f Dockerfile .",
+    "new": "docker run -td --name rails-app -p 3000:3000 -d rails-toolbox",
+    "start": "docker start rails-app",
+    "bash": "docker exec -it rails-app bash"
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
-    "turbolinks": "^5.2.0",
-    "build": "docker build -t rails-toolbox --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) -f Dockerfile.rails .",
-    "new": "docker run -td --name rails-app -p 3000:3000 -d rails-toolbox",
-    "start": "docker start rails-app",
-    "bash": "docker exec -it rails-app bash"
+    "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
