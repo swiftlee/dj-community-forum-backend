@@ -2,10 +2,8 @@
   "name": "dj_community_forum_backend",
   "private": true,
   "scripts": {
-    "docker-build": "docker build -t rails-toolbox -f Dockerfile .",
-    "new": "docker run -td --name rails-app -p 3000:3000 -d rails-toolbox",
-    "start": "docker start rails-app",
-    "bash": "docker exec -it rails-app bash"
+    "build": "docker-compose build",
+    "start": "docker-compose up"
   },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
