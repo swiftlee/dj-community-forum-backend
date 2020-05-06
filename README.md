@@ -27,9 +27,29 @@ test:
   database: myapp_test
 ```
 ## Running the project
-TBA
+- After setting up Docker and editing `/config/database.yml`, you will need to run a few additional commands: 
+1)  Create the docker volume:
+    ```
+    docker volume create --name=db
+    ```
 
-Once you get the app running, connect to the web container (rails-app) and run `rake db:create`.
+2) Build/start container in background:
+    ```
+    docker-compose up -d
+    ```
+
+3) Ensure images "dj-community-forum-backend_web" and "postgres" are both running by executing:
+    ```
+    docker ps
+    ```
+    This should show both images having the status "Up" following by some amount of time. 
+
+4) Create the database by running the following command:
+    ```
+      docker exec -it rails-app rake db:create
+    ```
+
+The rails server should be running on port 3000. Once the database is set up, visit localhost:3000 in your browser.
 
 
 Things you may want to cover:
