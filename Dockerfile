@@ -34,7 +34,7 @@ RUN bundle install
 COPY . /dj-community-forum-backend
 
 COPY package*.json /dj-community-forum-backend
-RUN yarn install
+RUN yarn
 
 # Executed every time the container starts
 COPY entrypoint.sh /usr/bin/
