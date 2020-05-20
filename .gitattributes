@@ -1,0 +1,2 @@
+# Set line endings to LF, even on Windows. Otherwise, execution within Docker fails.
+*.sh text eol=lf

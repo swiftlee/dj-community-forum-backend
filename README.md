@@ -52,7 +52,7 @@ test:
 The rails server should be running on port 3000. Once the database is set up, visit localhost:3000 in your browser.
 
 ### Common issues
-- If "docker-compose up" fails with exit code 1, open the shell Script file (entrypoint.sh) with VS Code (or your text editor of choice), and change CRLF to LF. Save the file and then run docker-compose again. 
+- If "docker-compose up" fails with exit code 1 on the rails-app container, open the shell script (entrypoint.sh) with VS Code (or your text editor of choice), and change CRLF to LF. Save the file and then run `docker-compose build` and then `docker-compose up` again. This _should_ be fixed for all future project clones given the `.gitattributes`. 
 
 Things you may want to cover:
 
