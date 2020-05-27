@@ -1,3 +1,3 @@
-class Comment < ApplicationRecord
-  belongs_to :user
+class Comment < ActiveRecord::Base
+  belongs_to :post
 end

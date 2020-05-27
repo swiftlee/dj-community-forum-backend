@@ -1,3 +1,9 @@
-class CommentSerializer < ActiveModel::Serializer
-  attributes :id, :body, :user
+# frozen_string_literal: true
+
+class CommentSerializer
+  include JSONAPI::Serializer
+
+  attribute :id
+  attribute :user
+  attribute :body
 end

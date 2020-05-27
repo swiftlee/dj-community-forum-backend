@@ -1,0 +1,82 @@
+
+app/channels/application_cable/channel.rb,177
+module ApplicationCableApplicationCable1,0
+  class Channel < ActionCable::Channel::BaseChannel2,0
+  class Channel < ActionCable::Channel::BaseApplicationCable::Channel2,0
+
+app/channels/application_cable/connection.rb,195
+module ApplicationCableApplicationCable1,0
+  class Connection < ActionCable::Connection::BaseConnection2,0
+  class Connection < ActionCable::Connection::BaseApplicationCable::Connection2,0
+
+app/controllers/application_controller.rb,78
+class ApplicationController < ActionController::APIApplicationController1,0
+
+app/controllers/posts_controller.rb,88
+class PostsController < ApplicationControllerPostsController3,0
+  def indexindex4,0
+
+app/controllers/users_controller.rb,254
+class UsersController < ApplicationControllerUsersController1,0
+  def indexindex5,0
+  def showshow12,0
+  def createcreate17,0
+  def updateupdate28,0
+  def destroydestroy37,0
+    def set_userset_user43,0
+    def user_paramsuser_params48,0
+
+app/jobs/application_job.rb,58
+class ApplicationJob < ActiveJob::BaseApplicationJob1,0
+
+app/mailers/application_mailer.rb,67
+class ApplicationMailer < ActionMailer::BaseApplicationMailer1,0
+
+app/models/application_record.rb,67
+class ApplicationRecord < ActiveRecord::BaseApplicationRecord1,0
+
+app/models/comment.rb,208
+class Comment < ApplicationRecordComment1,0
+  belongs_to :useruser2,0
+  belongs_to :useruser=2,0
+  belongs_to :userbuild_user2,0
+  belongs_to :usercreate_user2,0
+  belongs_to :usercreate_user!2,0
+
+app/models/post.rb,202
+class Post < ApplicationRecordPost1,0
+  belongs_to :useruser2,0
+  belongs_to :useruser=2,0
+  belongs_to :userbuild_user2,0
+  belongs_to :usercreate_user2,0
+  belongs_to :usercreate_user!2,0
+
+app/models/user.rb,40
+class User < ApplicationRecordUser1,0
+
+app/serializers/comment_serializer.rb,46
+class CommentSerializerCommentSerializer3,0
+
+app/serializers/post_serializer.rb,184
+class PostSerializerPostSerializer3,0
+  has_many :commentscomments6,0
+  has_many :commentscomments=6,0
+  has_many :commentscomment_ids6,0
+  has_many :commentscomment_ids=6,0
+
+config/application.rb,201
+module DjCommunityForumBackendDjCommunityForumBackend22,0
+  class Application < Rails::ApplicationApplication23,0
+  class Application < Rails::ApplicationDjCommunityForumBackend::Application23,0
+
+db/migrate/20200507014657_create_users.rb,89
+class CreateUsers < ActiveRecord::Migration[6.0]CreateUsers1,0
+  def changechange2,0
+
+db/migrate/20200526174948_create_posts.rb,89
+class CreatePosts < ActiveRecord::Migration[6.0]CreatePosts1,0
+  def changechange2,0
+
+db/migrate/20200526175048_create_comments.rb,95
+class CreateComments < ActiveRecord::Migration[6.0]CreateComments1,0
+  def changechange2,0

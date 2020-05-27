@@ -1,5 +1,7 @@
-class PostSerializer < ActiveModel::Serializer
-  has_many :comments
+# frozen_string_literal: true
 
-  attributes :id, :title, :content
+class PostSerializer
+  include FastJsonapi::ObjectSerializer
+  attributes :title, :content
+  has_many :comments
 end
